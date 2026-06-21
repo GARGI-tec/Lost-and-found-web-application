@@ -19,9 +19,9 @@ load_dotenv()
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET", "super_secret_key_123")
 cloudinary.config(
-    cloud_name=os.getenv("CLOUDINARY_NAME", "duifjklg7"),
-    api_key=os.getenv("CLOUDINARY_KEY", "918878566914447"),
-    api_secret=os.getenv("CLOUDINARY_SECRET", "u-dYpWFblTNEKCcl-gRfSZ_zdx0")
+    cloud_name=os.getenv("CLOUDINARY_NAME", ""),
+    api_key=os.getenv("CLOUDINARY_KEY", ""),
+    api_secret=os.getenv("CLOUDINARY_SECRET", "")
 )
 db_config = {
     "host": os.getenv("DB_HOST", "localhost"),
@@ -33,7 +33,7 @@ app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 587
 app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USERNAME"] = os.getenv("MAIL_USERNAME", "hkbka0302@gmail.com")
-app.config["MAIL_PASSWORD"] = os.getenv("MAIL_PASSWORD", "sxcp cwgh mivz crtb")
+app.config["MAIL_PASSWORD"] = os.getenv("MAIL_PASSWORD", "")
 app.config["MAIL_DEFAULT_SENDER"] = app.config["MAIL_USERNAME"]
 mail = Mail(app)
 def get_db():
