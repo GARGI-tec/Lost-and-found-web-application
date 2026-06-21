@@ -159,18 +159,6 @@ Helper functions:
 - Passwords are hashed using werkzeug.security
 - Admin login required for sensitive operations
 - Environment variables for sensitive data
-- CSRF protection should be added for production
-
-## Future Improvements
-
-- Create proper Jinja2 templates (move from render_template_string)
-- Add user authentication tokens
-- Implement CSRF protection
-- Add unit tests
-- Add email verification
-- Add user profile management
-- Improve fuzzy matching algorithm
-- Add SMS notifications
 
 ## Support
 
